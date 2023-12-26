@@ -30,16 +30,16 @@ app.post("/convert-mp3", async (req, res) => {
         videoId === "" ||
         videoId === null
     ){
-        return res.render("index", {success : false, message : "Please Enter A Video ID Niggah"})
+        return res.render("index", {success : false, message : "Please Enter A Video ID Niggah"});
     }else{
         const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${videoId}`, {
-            "method" : "GET",
-            "headers": {
-                "x-rapidapi-key" : process.env.API_KEY,
-                "x-rapidapi-host" : process.env.API_HOST
-            }
-        });
-
+        method: "GET",
+        headers: {
+        "x-rapidapi-key": process.env.API_KEY,
+        "x-rapidapi-host": process.env.API_HOST
+    }
+});
+    
         const fetchResponse = await fetchAPI.json();
 
         if(fetchResponse.status === "ok")
