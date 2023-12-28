@@ -44,12 +44,7 @@ app.post("/convert-mp3", async (req, res) => {
     }
 });
 
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
+
 
         const fetchResponse = await fetchAPI.json();
 
