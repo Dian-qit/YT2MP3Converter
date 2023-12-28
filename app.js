@@ -35,9 +35,9 @@ app.post("/convert-mp3", async (req, res) => {
         message: "Please Enter A Video ID Niggah",
     });
 } else {
-        const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=dQw4w9WgXcQ`, {
-        method: "GET",
-        headers: {
+        const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${videoId}`, {
+        "method" : "GET",
+        "headers": {
         "x-rapidapi-key": process.env.API_KEY,
         "x-rapidapi-host": process.env.API_HOST
     }
