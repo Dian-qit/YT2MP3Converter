@@ -13,7 +13,8 @@ body{
 
 .top-container{
   height: 40vh;
-  background-color: red;
+  background: rgb(31,29,29);
+  background: linear-gradient(181deg, rgba(31,29,29,1) 0%, rgba(255,255,255,1) 80%);
 }
 
 .bottom-container{
