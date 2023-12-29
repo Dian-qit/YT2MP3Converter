@@ -1,6 +1,7 @@
 //required packages
 const express = require("express");
 const fetch = require("node-fetch");
+const axios = require('axios');
 require("dotenv").config();
 
 //create the expree server 
@@ -43,6 +44,13 @@ app.post("/convert-mp3", async (req, res) => {
         "x-rapidapi-host": process.env.API_HOST
     }
 });
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
 
 
 
