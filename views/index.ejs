@@ -10,37 +10,86 @@
     <title>Youtube to MP3 </title>
 </head>
 <body>
+    <header>
+        <nav>
+
+            <div class="right-container">
+                <a href="#" class="logo">Logo Text</a>
+            </div>
+
+            <div class="left-container">
+              <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Convert</a></li>
+                <li><a href="#" class="nav-link">Contacts</a></li>
+              </ul>
+            </div>
+            
+          </nav>
+    </header>
+
+    <%/* SERVICES */%>
+
+    <div class="services">
+        <img src="img\BackgroungSRVC.png" alt="123">
+        <h1>Convert YouTube Videos with Ease</h1>
+        <span>Your YouTube, Your Way.</span>
+        <div class="services-contents">
+            <div class="services-youtube-converter">
+                <h2>YT to MP3</h2>
+                <p>Convert YouTube videos to high-quality MP3 files for free.</p>
+                <button class="srvc-btn"><a href="#">CONVERT NOW</a></button>
+            </div>
+            <div class="services-youtube-converter">
+                <h2>YT to MP4</h2>
+                <p>Download YouTube videos in MP4 format with different video resolutions.</p>
+                <button class="srvc-btn"><a href="#">CONVERT NOW</a></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="convert-area">
+        <div class="top-container">
+            <form action="/convert-mp3" method="POST" id="form">
+                <h1>Youtube To Mp3 Converter</h1>
+                <h4>Enter the video ID</h4>
+                <div>
+                    <input type="text" name="videoID" placeholder="Video ID"><button id="convert-btn">Convert</button>
+                </div>
+            </form>
+        </div>
     
-    <div class="top-container">
-        <form action="/convert-mp3" method="POST" id="form">
-            <h1>Youtube To Mp3 Converter</h1>
-            <h4>Enter the video ID</h4>
-            <div>
-                <input type="text" name="videoID" placeholder="Video ID"><button id="convert-btn">Convert</button>
-            </div>
-        </form>
+        <div class="bottom-container">
+            <% if(typeof success != "undefined" && success) { %>
+                <div class="success">
+                    <p><%= song_title %></p>
+                    <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
+                </div>
+            <% } else if(typeof success != "undefined" && !success) { %>
+                <div class="errors">
+                    <p><%= message %></p>
+                </div>
+            <% } %>
+        </div>
+    
+    </section>
+
+    <div id="contacts" class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Email: </p>
+        <p>Facebook: </p>
+        <p>Instagram: </p>
     </div>
 
-    <div class="bottom-container">
-        <% if(typeof success != "undefined" && success) { %>
-            <div class="success">
-                <p><%= song_title %></p>
-                <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
-            </div>
-        <% } else if(typeof success != "undefined" && !success) { %>
-            <div class="errors">
-                <p><%= message %></p>
-            </div>
-        <% } %>
-    </div>
-
-
-    <footer style="padding-top: 25%; padding-left: 80%;">
-        <p>
-            <a href="https://www.facebook.com/vincentadrian.quitoriano.5">CONTACT DEV: FACEBOOK</a>
-            <BR></BR>
-            <a href="https://www.facebook.com/vincentadrian.quitoriano.5">CONTACT DEV: INSTAGRAM</a>
-        </p>
+    <footer>
+        &copy; My Converter kunuhay 2023. All rights reserved.<br>
+        
     </footer>
+    <script type="text/javascript">
+        window,addEventListener("scroll", function(){
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 </body>
 </html>
