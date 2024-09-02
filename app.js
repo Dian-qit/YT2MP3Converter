@@ -32,6 +32,11 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/convert", (req, res) => {
+    res.render("convert");
+});
+
+
 app.post("/convert-mp3", async (req, res) => {
     const videoUrl = req.body.videoID;
 
@@ -55,6 +60,8 @@ app.post("/convert-mp3", async (req, res) => {
             headers: {
                 "x-rapidapi-key": process.env.API_KEY,
                 "x-rapidapi-host": process.env.API_HOST
+
+                
             }
         });
 

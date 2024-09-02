@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  color: #f1f5f0;
 }
 
 
@@ -19,9 +20,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px  45px;
+  padding: 2.2rem  9rem;
   transition: 0.6s;
-  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 
@@ -33,7 +35,7 @@ nav {
 .nav-link {
   color: white;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 8px 0;
   margin-right: 10px;
 }
 
@@ -52,16 +54,13 @@ nav {
 .left-container ul li{
   list-style: none;
   display: inline-block;
-  border-right: 1px solid #fff;
+  padding: 0 0 0 90px;
 }
 
-.left-container ul li:last-child {
-  border-right: none; /* Remove right border from the last list item */
-}
 /*Sticky*/
 
 nav.sticky{
-  padding: 7px 50px;
+  padding: 20px 50px;
   background-color: #1B263B;
   font-size: 18px;
 }
@@ -88,70 +87,66 @@ span{
   font-size: 20px;
 }
 
-.value-proposition{
-  padding: 30px 100px;
-  margin: 30px 100px 0 100px;
-  font-size: 13px;
-  width: auto;
-}
 
-.services {
-  margin: 150px 0 0 0;
+.about {
+  display: flex;
+  margin: 11rem 0 0 0;
   width:auto;
-  text-align: center;
-  color: #E0E1DD;
+  color: #E0E1DD; 
   justify-content: center;
 }
-.services-youtube-converter {
-  margin-bottom: 20px;
-  border: 1px solid black;
-  margin: 40px 40px;
-  padding: 20px 10px;
-  width:400px ;
-  
+
+.abt-left-container{
+  padding-right: 5rem;
+  padding-top: 6rem;
 }
 
-.services-contents{
-  text-align: center;
+.title-abt{
+  font-size: 3.3125rem;
+  font-weight: 600;
+}
+
+.title-abt span{
+  font-size: 3.3125rem;
+}
+
+.sub-abt{
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 2.5rem 0;
+}
+
+.btn-abt{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 1rem 0rem;
 }
 
-.srvc-btn{
-  width: 200px;
-  border: solid 1px #000;
-  border-radius: 45px;
-  height: 30px;
-  margin: 20px 0 ;
-  padding: 3px 10px 10px;
-  transition: 0.3s;
-  background-color: #778DA9;
-  font-weight: 1000;
+.btn-abt button{
+  width: 14.875rem;
+  height: 3.4375rem;
+  border-radius: 2rem;
+  border-color: none;
+  font-size: 20px;
+  font-weight: 600;
+
 }
 
-.srvc-btn:hover{
-  background-color: #415A77;
-  color: #E0E1DD;
+.how-btn-abt{
+  padding:0 2rem;
+
 }
 
-.srvc-btn a:hover{
-  color: #000;
+.how-btn-abt button{
+  background-color: #3F4F5E;
 }
 
-.srvc-btn a {
-  text-decoration: none;
-  color: #1B263B;
-  padding: 0 0 10px 0;
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
+.strt-btn-abt button{
+  background-color: #344865;
 }
-
 
 body {
   color: #fff;
-  background-color: #0D1B2A; /* Adding this line to set the background color to black */
+  background-color: #0d1821; /* Adding this line to set the background color to black */
 }
 
 /*.top-container{
@@ -212,8 +207,8 @@ body {
 
 #form button:hover{
   color:white;
-  background-color:  red;
-  border: 1px solid  red;
+  background-color:  #778DA9;
+  border: 1px solid  #778DA9;
   transform: scale(1.1);
 }
 
@@ -227,9 +222,9 @@ body {
   gap: 10px;
   border-radius: 5px;
   padding: 12px;
-  color: red;
+  color: #778DA9;
   background-color: #ffe6e6;
-  border: 1px solid red;
+  border: 1px solid #778DA9;
 }
 
 .success{
@@ -299,12 +294,34 @@ body {
   
 }
 
+/* How to use */
+
+.main-how-to-use{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 5rem 0;
+}
+
+.how-to-use {
+  display: flex;
+  background-color: #fff;
+  width: 30rem;
+  height: 15rem;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+
+}
+
 /* CONTACTS */
 
 #contacts {
   background-color: #f4f4f4;
   padding: 20px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px*/
 }
 
 #contacts h2 {
