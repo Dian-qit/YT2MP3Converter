@@ -47,11 +47,11 @@
     
             <div class="btn-abt">
                 <div class="how-btn-abt">
-                    <button>HOW DOES WORK?</button>
+                    <button><a href="#how-does-it-work">How Does it Work?</a></button>
                 </div>
     
                 <div class="strt-btn-abt">
-                    <button><a href="">Get Started</a></button>
+                    <button><a href="#convert">Get Started</a></button>
                 </div>
             </div>
         </div>
@@ -61,37 +61,90 @@
         </div>
     </div>
 
-    <section class="convert-area">
-        <div class="top-container">
-            <form action="/convert-mp3" method="POST" id="form">
-                <h1>Youtube To Mp3 Converter</h1>
-                <h4>Enter the video ID</h4>
-                <div>
-                    <input type="text" name="videoID" placeholder="Video ID"><button id="convert-btn">Convert</button>
-                </div>
-            </form>
-        </div>
+    <div class="mission">
+        <h1>Why YTCNVRTR?</h1>
+        <div class="missionContent">
+            <div class="missionOne">
+                <img src="\css\pngs\clockIcon.png" alt="">
+                <h3>Saves time</h3>
+                <p>No need to wait 10 minutes for one song</p>
+            </div>
     
-        <div class="bottom-container">
-            <% if(typeof success != "undefined" && success) { %>
-                <div class="success">
-                    <p><%= song_title %></p>
-                    <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
-                </div>
-            <% } else if(typeof success != "undefined" && !success) { %>
-                <div class="errors">
-                    <p><%= message %></p>
-                </div>
-            <% } %>
+            <div class="missionOne">
+                <img src="\css\pngs\CheckIcon.png" alt="">
+                <h3>Simple</h3>
+                <p>Push a few buttons, and there you have your music</p>
+            </div>
+    
+            <div class="missionOne">
+                <img src="\css\pngs\NoAdsIcon.png" alt="">
+                <h3>No Ads</h3>
+                <p>No annoying ads on every clicks you do</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="convert" id="convert">
+        <div class="convert-area">
+            <div class="top-container">
+                <form action="/convert-mp3" method="POST" id="form">
+                    <img src="\css\pngs\searchBar.png" alt="">
+                    <div>
+                        <input type="text" name="videoID" placeholder="Enter YouTube URL"><button id="convert-btn">Search</button>
+                    </div>
+                </form>
+            </div>
+        
+            <div class="bottom-container">
+                <% if(typeof success != "undefined" && success) { %>
+                    <div class="success">
+                        <p><%= song_title %></p>
+                        <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
+                    </div>
+                <% } else if(typeof success != "undefined" && !success) { %>
+                    <div class="errors">
+                        <p><%= message %></p>
+                    </div>
+                <% } %>
+            </div>
         </div>
     
     </section>
 
-    <div class="main-how-to-use">
-        <div class="how-to-use">
-            <p>test</p>
+    <div class="how-does-it-work" id="how-does-it-work">
+        <div class="content-container">
+            <img src="\css\pngs\folder.png" alt="">
+            <div class="content">
+            <h1>How Does It Work?</h1>
+            
+           <div class="info-container">
+            <div class="content-info">
+                <h1>1</h1>
+                <p>Copy URL of your favortite music or song</p>
+            </div>
+
+            <div class="content-info">
+                <h1>2</h1>
+                <p>Paste the URL </p>
+            </div>
+
+            <div class="content-info">
+                <h1>3</h1>
+                <p>Click the convert button and wait</p>
+            </div>
+
+            <div class="content-info">
+                <h1>4</h1>
+                <p>Click the
+                    download
+                    button</p>
+            </div>
+           </div>
+        </div>
         </div>
     </div>
+
 
     <div id="contacts" class="contact-info">
         <h2>Contact Us</h2>
