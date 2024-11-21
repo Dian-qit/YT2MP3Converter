@@ -57,7 +57,7 @@ nav {
 .left-container ul li{
   list-style: none;
   display: inline-block;
-  padding: 0 0 0 90px;
+  padding: 0 0 0 5.625rem;
 }
 
 /*Sticky*/
@@ -372,25 +372,83 @@ body {
   
 }
 @media(max-width:768px){
-  .bottom-container{
-    width: 90%;
-    margin: auto;
+
+  *{
+    width: auto;
+  }
+  /* nav.sticky {
+    margin-top: 3rem;
+  }  */
+  nav{
+    padding: 0;
+    justify-content: space-evenly;
   }
 
-  #form, .success{
-    text-align: center;
-    width: 100%;
+  .left-container ul li{
+    padding: 0 0 0 2rem;
+
+  }
+  .about{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  } 
+  .abt-right-container img{
+    height: 300px;
+    width: 300px;
   }
 
-  .value-proposition{
-    padding: 0 0;
-    margin: 30px 20px;
+  .abt-left-container{
+    padding: 0px;
+  }
+  .title-abt{
+    font-size: 2rem;
   }
 
-  nav {
-    display: none;
+  
+  .btn-abt button{
+    width: 9.875rem;
+    height: 3rem;
+    font-size: 1rem;
+  
   }
   
+
+  
+  .how-btn-abt button{
+    background-color: #3F4F5E;
+  }
+
+
+
+  .missionContent{
+    flex-direction: column;
+  }
+
+  .convert-area{
+    width: auto;
+    padding: 3rem;
+  }
+
+  #form input{
+    width: 20rem;
+    height: 3rem;
+  
+    
+  }
+  
+  #form button{
+    background-color: #344865;
+    width: 10rem;
+    height: 3rem;
+  }
+
+  .content-container img{
+    display: none;
+
+  }
 }
 
 @media(max-width:480px){
@@ -398,12 +456,87 @@ body {
     width: 50%;
   }
 
+  .mission h1 {
+    font-size: 1.6rem;
+  }
+  .about{
+    margin: 5rem 0 0;
+  }
+  .abt-right-container{
+    display: none;
+  }
+
+  .content-container{
+    flex-direction: column;
+  }
+  .content-container img{
+    display: none;
+
+  }
+  .content{
+    height: auto;
+    width: auto;
+  }
   .value-proposition{
     padding: 0 0;
     margin: 30px 20px;
   }
   
+  .btn-abt button{
+    width: 7.875rem;
+    height: 3rem;
+    font-size: 1rem;
   
+  }
+  .sub-abt{
+    font-size: 1rem;
+  }
+
+  #form input{
+    width: 10rem;
+    height: 2rem;
+    padding: 1rem;
+    
+  }
+  #form{
+    display: flex;
+    flex-direction: column;
+  }
+  .convert-area{
+    width: 22rem;
+    height: auto;
+  }
+  #form button{
+    background-color: #344865;
+    width: 5rem;
+    height: 2rem;
+  }
+  
+  .logo{
+    font-size: 1.5rem;
+  }
+
+  .left-container{
+    font-size: 1rem;
+  }
+  nav{
+    padding: .3rem;
+  }
+
+  /* ul{
+    position: fixed;
+    top: 100px;
+    left: -40px;
+    background-color: #1F2C38;
+    width: 100%;
+    padding: 5rem 0 0 5rem;
+    text-align: center;
+    height: 100vh;
+    margin: 2rem;
+    margin-top: -2rem;
+    
+  
+  } */
 }
 
 /* How to use */
