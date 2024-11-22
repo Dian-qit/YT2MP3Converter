@@ -18,6 +18,4 @@ This project is a lightweight and efficient web application designed to convert 
 ## Note  
 This project is designed for personal use and demonstrates core concepts of web development, including server-side handling, API integration, and UI design.  
 
----
-
-Feel free to clone, explore, and contribute! 😊  
+ 
